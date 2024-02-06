@@ -1,1 +1,263 @@
 // Your styles go here
+body{
+    width: 80%;
+    margin: 0 auto 1rem;
+    
+}
+html {
+    box-sizing: border-box;
+    text-align: center;
+}
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+.box {
+    margin: .2rem;
+    padding: .5rem;
+    //border: 1px solid #000;
+    border-radius: 5px;
+}
+//Header and footer
+.a, .k{
+    padding: .75rem;
+    background-color: aqua;
+    color: aqua;
+}
+//black boxes
+.b, .c, .d, .e, .f, .g, .h, .i, .j {
+    background-color: black;
+    color: black;
+}
+
+.large{
+    background-color: aqua;
+    color: aqua;
+}
+.medium{
+    background-color: aqua;
+    color: aqua;
+}
+
+
+/* Large screens *********************************************/
+.container {
+    
+    border-radius: .75rem;
+    display: grid;
+    /* set up grid */
+    grid-template-columns: repeat(10, 1fr);
+    //grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+
+    grid-template-areas: 
+        "a a a a a a a a a a"
+        "b b c c d d e e f f"
+        "lar lar lar lar lar small small small small small"
+        "k k k k k k k k k k";
+}
+.small{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    grid-template-areas: 
+    "med med"
+    "g h"
+    "i j";
+    grid-area: small;
+  }
+
+.a{
+    grid-area: a;
+    height: 40px;
+}
+.b{
+    grid-area: b;
+}
+.c{
+    grid-area: c;
+}
+.d{
+    grid-area: d;
+}
+.e{
+    grid-area: e;
+}
+.f{
+    grid-area: f;
+}
+.g{
+    grid-area: g;
+}
+.h{
+    grid-area: h;
+}
+.i{
+    grid-area: i;
+}
+.j{
+    grid-area: j;
+}
+.k{
+    grid-area: k;
+    height: 40px;
+}
+.medium{
+    grid-area: med;
+    height: 150px;
+}
+.large{
+    grid-area: lar;
+}
+
+
+/* Medium screens *********************************************/
+@media all and (min-width: 500px) and (max-width: 800px) {
+    .container {
+        
+        border-radius: .75rem;
+        display: grid;
+        /* set up grid */
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        //grid-template-rows: 1fr 1fr 1fr 1fr;
+        gap: 10px;
+
+        grid-template-areas: 
+            "a a a a a"
+            "b c d e f"
+            "lar lar lar lar lar"
+            "small small small small small"
+            "k k k k k";
+    }
+    .small{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 10px;
+        grid-template-areas: 
+        "g h med med"
+        "i j med med";
+        grid-area: small;
+      }
+
+    .a{
+        grid-area: a;
+        height: 40px;
+    }
+    .b{
+        grid-area: b;
+    }
+    .c{
+        grid-area: c;
+    }
+    .d{
+        grid-area: d;
+    }
+    .e{
+        grid-area: e;
+    }
+    .f{
+        grid-area: f;
+    }
+    .g{
+        grid-area: g;
+    }
+    .h{
+        grid-area: h;
+    }
+    .i{
+        grid-area: i;
+    }
+    .j{
+        grid-area: j;
+    }
+    .k{
+        grid-area: k;
+        height: 40px;
+    }
+    .medium{
+        grid-area: med;
+        height: 150px;
+    }
+    .large{
+        grid-area: lar;
+        height: 200px;
+    }
+}
+
+/* Small screens *************************************************/
+@media all and (max-width: 500px) {
+    .container {
+       
+        border-radius: .75rem;
+        display: grid;
+        /* set up grid */
+        grid-template-columns: 1fr 1fr;
+        //grid-template-rows: 1fr 1fr 1fr 1fr;
+        gap: 10px;
+
+        grid-template-areas: 
+            "a a"
+            "b b"
+            "c c"
+            "d d"
+            "e e"
+            "f f"
+            "lar lar"
+            "small small"
+            "k k";
+    }
+    .small{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        grid-template-areas: 
+        "g med"
+        "h med"
+        "i med"
+        "j med";
+        grid-area: small;
+      }
+
+    .a{
+        grid-area: a;
+        height: 40px;
+    }
+    .b{
+        grid-area: b;
+    }
+    .c{
+        grid-area: c;
+    }
+    .d{
+        grid-area: d;
+    }
+    .e{
+        grid-area: e;
+    }
+    .f{
+        grid-area: f;
+    }
+    .g{
+        grid-area: g;
+    }
+    .h{
+        grid-area: h;
+    }
+    .i{
+        grid-area: i;
+    }
+    .j{
+        grid-area: j;
+    }
+    .k{
+        grid-area: k;
+        height: 40px;
+    }
+    .medium{
+        grid-area: med;
+        height: auto;
+    }
+    .large{
+        grid-area: lar;
+        height: 200px;
+    }
+}
