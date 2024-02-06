@@ -46,7 +46,6 @@ html {
     display: grid;
     /* set up grid */
     grid-template-columns: repeat(10, 1fr);
-    //grid-template-rows: 1fr 1fr 1fr 1fr;
     gap: 10px;
 
     grid-template-areas: 
@@ -118,7 +117,6 @@ html {
         display: grid;
         /* set up grid */
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        //grid-template-rows: 1fr 1fr 1fr 1fr;
         gap: 10px;
 
         grid-template-areas: 
